@@ -76,19 +76,19 @@ body{
     margin-left: 50%;
     width:10%;
 }
-#regdiv{
+.regdiv{
     clear:both;
     position: absolute;
     z-index:2;
     width: 100%:;
-    top: 0em;
+    top: -2em;
     display: none;
 }
 .register{
     position: relative;
-    width:120%;
+    width:130%;
     margin-top: 0px;
-    margin-left:-3em;
+    margin-left:-4em;
     transform:rotate(-7deg);
     -ms-transform:rotate(-7deg);
     -moz-transform:rotate(-7deg);
@@ -100,10 +100,25 @@ body{
     -ms-transform: rotateX(-100deg);
     -o-transform: rotateX(-100deg);
 }
+.iosDiv{
+    clear:both;
+    position: absolute;
+    z-index:2;
+    width: 100%:;
+    top: 0em;
+    display: none;
+}
+#iosNotReady{
+    position: relative;
+    width:95%;
+    margin-top: 2.5em;
+    margin-left:0.5em;
+
+}
 #forios{
     clear:both;
     position: absolute;
-    z-index: 21;
+    z-index: 999;
     background-image:url(../static/image/download.png);
     background-size: 200%,100%;
     background-repeat:no-repeat;
@@ -111,13 +126,14 @@ body{
     width:40%;
     height: 3em;
     bottom:10em;
-    margin-left: 5%;
+    margin-left: 7%;
     display: none;
+
 }
 #forandroid{
     clear:both;
     position: absolute;
-    z-index: 21;
+    z-index: 999;
     background-image:url(../static/image/download.png);
     background-size: 200%,100%;
     background-position:right;
@@ -125,7 +141,7 @@ body{
     width:40%;
     height: 3em;
     bottom:10em;
-    right: 5%;
+    right: 7%;
     display: none;
 }
 .enlarge{
@@ -176,6 +192,12 @@ body{
     -o-transform: rotateX(0deg);
     transform: rotateX(0deg);
 }
+.iosNotReady{
+  -webkit-animation: turn 3s;
+  animation: turn 2s ;
+}
+
+
 .rightscale{
     -webkit-transform: scale(0.7);
     -moz-transform: scale(0.7);
@@ -222,6 +244,20 @@ body{
 }
 
 }
+@-webkit-keyframes turn {
+  to {
+    -webkit-transform: rotateY(720deg);
+  }
+}
+
+@keyframes turn {
+  to {
+    transform: rotateY(720deg);
+  }
+}
+
+
+
 @-webkit-keyframes hehe{
     0%{
         -webkit-transform:scale(0.9);
